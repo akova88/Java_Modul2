@@ -40,7 +40,7 @@ public class convertTemperature {
     }
 
     public static double FtoC(double doF) {
-        double doC = (5 / 9) * ( doF - 32);
+        double doC = (5.0 / 9) * ( doF - 32);
         return doC;
     }
 }

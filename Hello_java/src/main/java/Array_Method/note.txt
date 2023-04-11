@@ -1,0 +1,52 @@
+1. Phân biệt biến mảng (biến tham chiếu), Đối tượng mảng
+=> Biến mảng không được cấp phát bộ nhớ
+=> Chỉ cấp phát bộ nhớ cho tham chiếu đến mảng
+=> Nếu ko gắn tham chiếu đến mảng thì giá trị của biển mảng là null
+=> không thể gán các phần tử của mảng nếu chưa khai báo mảng
+vd: double[] myArray = new double[10];
+ - myArray là một biến chứa tham chiếu đến một đối tượng mảng kiểu double
+ có 10 phần tử.
+ 2. Khởi tạo mảng:
+ b1: Khởi tạo 1 mảng mới => new elementType[arraySize]
+ b2: gán tham chiếu của mảng cho biến
+ vd:    double[] myArray = new double[10];
+ hoặc:  double myArray[] = new double[10];
+
+ => Khởi tạo nhanh một mảng
+ double[] myArray = {value0, value1...valuek};
+ 3. Muốn sao chép 1 mảng lên kích thước gấp đôi thì làm như thế nào
+ - Khởi tạo một mảng mới có kích thước gấp đôi
+ - Sao chép các phần tử của mảng cũ vào mảng mới
+ => có 3 cách sao chép mảng:
+  + Sử dụng vòng lặp
+  + Sử dụng phương thức arraycopy
+  + sử dụng phương thức clone
+
+  * Sử dụng String format trong Java
+  * Sử lý trôi lệnh:
+  int age = Integer.parseInt(input.nextLine()); ép kiểu cho chuỗi nhập vào
+  * Wrapper class in Java
+  int x = 10;  // x là kiểu dl nguyên thuỷ
+  Integer y = new Integer(10); // y là kiểu dữ liệu tham chiếu
+  int z = x + y // autoboxing => unboxing từ Integer về int
+  - Sử dụng để convert kiểu dữ liệu
+  int z1 = Integer.value("45"); -> string => int
+  int z2 = Integer.parseInt("45");
+  Long.valueOf("56");
+  Boolean.valueOf("true");
+
+  Integer k = 10; // boxing tự động từ int thành Integer
+  k = new Integer(10); khai báo kiểu tham chiếu
+
+  int x1 = 10;
+  int x2 = 10;
+  Integer x3 = 10;  // x1 == x2 == x3
+
+  Integer k1 = new Integer(10);
+  Integer k2 = new Integer(10);
+  int k3 = 10;
+
+  k1 == k2 => false vì nó đang tham chiếu đến 2 đối tượng Integer khác nhau
+  k1 == k3 => true vì k1 sẽ unboxing thành int khi đó sẽ so sánh 2 giá trị
+  + muốn so sánh giá trị 2 đối tượng dùng: equals()
+  k1.equals(k2) => true

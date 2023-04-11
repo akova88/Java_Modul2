@@ -31,6 +31,8 @@ public class findMax {
             if ( arr[j] > max) {
                 max = arr[j];
                 index = j + 1;
+
+
             }
         }
         System.out.println("Gia tri tai san lon nhat la: " + max + " cua ty phu thu: " + index);

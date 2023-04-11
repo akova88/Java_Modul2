@@ -10,6 +10,10 @@ public class removeInArray {
         System.out.println("Nhập phần tử muốn xoá: ");
         int x = sc.nextInt();
         int index = findElement(x, arr);
+        if (index == -1) {
+            System.out.println("Không tìm thấy phần tử muốn xoá:");
+            System.exit(0);
+        }
         while (index != -1) {
             arr = remove(index, arr);
             index = findElement(x, arr);
@@ -21,6 +25,7 @@ public class removeInArray {
         int index = -1;
         for (int i = 0; i < arr.length; i++) {
             if ( arr[i] == value)
+
                 index = i;
         }
         return index;

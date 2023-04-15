@@ -1,4 +1,6 @@
-package Access_modifier;
+package Access_modifier.student;
+
+import Access_modifier.student.Student;
 
 public class TestStaticMethod {
     public static void main(String[] args) {

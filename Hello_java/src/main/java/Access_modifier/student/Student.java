@@ -1,4 +1,4 @@
-package Access_modifier;
+package Access_modifier.student;
 
 public class Student {
     private int rollno;

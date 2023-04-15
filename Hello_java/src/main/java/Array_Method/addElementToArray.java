@@ -23,7 +23,7 @@ public class addElementToArray {
 
     public static int[] addElement(int value, int index, int[] numbers) {
         int[] newList = new int[numbers.length+1];
-        for( int i = 0, k = 0; i < numbers.length; i++) {
+        for( int i = 0; i < numbers.length; i++) {
             newList[i] = numbers[i];
         }
         int temp;

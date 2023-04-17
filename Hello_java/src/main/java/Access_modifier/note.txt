@@ -1,0 +1,79 @@
+Access modifier
+1. Biến kiểu dữ liệu nguyên thuỷ:
+    - Lưu trữ giá trị của biến trong vùng nhớ được cấp
+    - Giá trị của 1 biến có thể gán cho biến khác
+        Vd: int a = 10; -> giá trị 10 của biến a lưu ở vùng nhớ dc cấp cho a
+            int b = a; -> sao chép giá trị 10 vào biến b ở vùng nhớ dc cấp b
+
+2. Biến tham chiếu:
+   - Lưu trữ tham chiếu của đối tượng ở trong vùng nhớ dc cấp
+   - Khi ta khai báo 1 biến tham chiếu(lưu ở vùng nhớ được cấp) đến
+   1 đối tượng ( lưu ở Heap )
+
+3. Biến của lớp và biến của đối tượng
+    - Biến được khai báo static là biến của lớp
+        vd: class App {
+            public static String language = "english";
+        }
+        sout(App.language);
+    - Biến của đối tượng được khai báo bên trong phương thức của lớp,
+    mỗi đối tượng có 1 bản sao của biến này
+    vd: class Example {
+        static int num = 0; -> biến của lớp
+        int id; -> biến khởi tạo instance
+
+    }
+4. Phương thức của lớp và đối tượng
+    - Phương thức static là phương thức của lớp, được gọi từ tên lớp
+        vd: vd: class Myapp {
+                        public static String getVersion(){
+                        retunr "1.0";
+                    }
+                    }
+                 Sout(Myapp.getVersion());
+    - Phương thức của đối tượng ko có từ khoá static và được gọi từ tên đối tượng
+5. Cách khai báo biến static
+    - Biến static được khai báo trong một class với từ khóa static, phía bên ngoài các phương thức, constructor và block.
+    - Sẽ chỉ có duy nhất một bản sao của các biến static được tạo ra, dù bạn tạo bao nhiêu đối tượng từ lớp tương ứng.
+    - Biến static được lưu trữ trong bộ nhớ static riêng.
+    - Biến static được tạo khi chương trình bắt đầu chạy và chỉ bị phá hủy khi chương trình dừng.
+    - Giá trị mặc định của biến static phụ thuộc vào kiểu dữ liệu bạn khai báo tương tự biến instance.
+    - Biến static được truy cập thông qua tên của class chứa nó, với cú pháp: TenClass.tenBien.
+    - Trong class, các phương thức sử dụng biến static bằng cách gọi tên của nó khi phương thức đó cũng được khai báo với từ khóa static.
+6. Phương thức static
+    - Chỉ có gọi các phương thức static khác
+    - Chỉ truy xuất các biến static
+    - Không thể sử dụng từ khoá this hoặc super
+7. Khai báo package
+    vd: package codegym;
+        package codegym.c02 => subpackage
+        tên package trùng tên thư mục chứa mã nguồn
+    -> import để sử dụng các lớp định nghĩa trong package khác
+8. Các access modifier
+    - public: có thể truy cập bất cứ đâu
+    - private: các phương thức và thuộc tính ở trong 1 lớp
+    - protected: truy xuất trong cùng 1 lớp và lớp con kế thừa
+    - deffault: mặc định không khai báo, truy xuất trong cùng package
+9. Getter - Setter
+    Setter: các phương thức cho phép thay đổi giá trị của thuộc tính
+    vd: public void setName( String name) {
+            this.name = name;
+        }
+    Getter: lấy về giá trị của thuộc tính
+        vd: public boolean isPropertyName(){}
+        -> Từ khoá this đại diện cho đối tươợng hiện tại
+        -> Dùng để truy cập các thuộc tính của đối tượng đó
+        ->Phân biệt 2 biến có cùng tên( biến của đối tượng & biến của phương thức)
+10. Nested Class - Lớp lồng nhau
+    - Ẩn 1 lớp bên trong lớp khác sẽ giúp cho các package gọn gàng hơn
+    - Tăng tính bao gói
+    - Giúp mã nguồn dễ đọc
+* Static nested class: --> thuộc lớp bên ngoài chứa nó
+                       --> ko thể truy xuất của lớp chứa nó
+                       --> sử dụng tên lớp chứa nó để truy xuất
+* Inner class: --> thuộc đối tượng của lớp bên ngoài
+               --> có thể truy xuất các thành phần lớp ngoài
+               --> Sử dụng tham chiếu đối tượng của lớp ngoài để truy
+               xuất đến Inner class
+* Local class: + được khai báo và sử dụng bên trong một khối lệnh
+               + Không thể sử dụng bên ngoài khối lệnh

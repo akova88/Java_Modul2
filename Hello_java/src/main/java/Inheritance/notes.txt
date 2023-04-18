@@ -1,0 +1,27 @@
+Những điểm quan trọng:
+
+--> Lớp con chuyên biệt hóa lớp cha của nó.
+
+--> Lớp con thừa kế tất cả các biến thực thể và phương thức public của lớp cha,
+    nhưng không thừa kế các biến thực thể và phương thức private của lớp cha.
+
+--> Có thể cài đè các phương thức được thừa kế; không thể cài đè các biến thực thể được thừa kế
+    (tuy có thể gán trị lại tại lớp con, nhưng đây là hai việc khác nhau)
+
+--> Dùng thử nghiệm IS-A để kiểm tra xem cấu trúc thừa kế của ta có hợp lí hay không.
+    Nếu X là lớp con của Y thì khẳng định X IS-A Y phải hợp lý.
+
+--> Quan hệ IS-A chỉ có một chiều. Con sói nào cũng là động vật,
+    nhưng không phải con vật nào cũng là chó sói.
+
+--> Khi một phương thức được cài đè tại một lớp con, và phương thức đó được kích hoạt cho một đối tượng của lớp đó,
+    thì phiên bản tại lớp con sẽ được chạy (cái gì ở thấp nhất thì được gọi).
+
+--> NếulớpBlàlớpconcủaA,lớpClàlớpconcủaB,thìmỗiđốitượngBthuộcloại A, mỗi đối tượng C thuộc loại B,
+    và mỗi đối tượng C cũng thuộc loại A. (quan hệ IS-A)
+
+--> Để gọi phiên bản phương thức của lớp cha từ trong lớp con,
+    sử dụng từ khóa super làm tham chiếu tới lớp cha.
+
+--> Nếu muốn nói thật chính xác thì phải là “tất cả các phương thức thừa kế được”.
+    Tạm thời, nó có nghĩa là “các phương thức public”, nhưng ta sẽ tinh chỉnh định nghĩa này sau. ↩

@@ -1,8 +1,9 @@
 package Abstract_Interface.shape;
 
+import Abstract_Interface.Colorable;
 import Abstract_Interface.Resizeable;
 
-public class Square extends Rectangle implements Resizeable {
+public class Square extends Rectangle implements Resizeable, Colorable {
     public Square() {
 
     }
@@ -41,6 +42,11 @@ public class Square extends Rectangle implements Resizeable {
     @Override
     public void resize(double percent) {
         super.resize(percent);
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four side");
     }
 
     public static void main(String[] args) {

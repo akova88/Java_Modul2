@@ -1,6 +1,6 @@
 package Abstract_Interface.shape;
 
-public class Shape {
+public abstract class Shape {
     private String color = "red";
     private boolean filled = true;
     public Shape() {
@@ -24,6 +24,7 @@ public class Shape {
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
+    public abstract double getArea();
 
     @Override
     public String toString() {

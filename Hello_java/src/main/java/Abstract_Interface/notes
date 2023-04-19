@@ -1,0 +1,42 @@
+Khi nào nên cho một lớp là lớp độc lập, lớp con, lớp trừu tượng, hay nên biến nó thành interface?
+
+   --> Một lớp nên là lớp độc lập, nghĩa là nó không thừa kế lớp nào (ngoại trừ Object) nếu nó không thỏa mãn
+    kiểm tra IS-A đối với bất cứ loại nào khác.
+
+   --> Một lớp nên là lớp con nếu ta cần cho nó làm một phiên bản chuyên biệt hơn của một lớp khác và cần cài đè
+    hành vi có sẵn hoặc bổ sung hành vi mới.
+
+   --> Một lớp nên là lớp cha nếu ta muốn định nghĩa một khuôn mẫu cho một nhóm các lớp con, và ta có một chút mã
+    cài đặt mà tất cả các lớp con kia có thể sử dụng. Cho lớp đó làm lớp trừu tượng nếu ta muốn đảm bảo rằng
+    không ai được tạo đối tượng thuộc lớp đó.
+
+Những điểm quan trọng:
+
+    --> Khi muốn cấm tạo đối tượng từ một lớp, ta dùng từ khóa abstract tại định nghĩa lớp để tuyên bố lớp đó là lớp trừu tượng.
+
+    --> Một lớp trừu tượng có thể có các phương thức trừu tượng cũng như không trừu tượng.
+
+    --> Nếu một lớp có dù chỉ một phương thức trừu tượng, lớp đó buộc phải là lớp trừu tượng.
+    Một phương thức trừu tượng không có thân, khai báo phương thức đó kết thúc bằng dấu chấm phảy.
+
+    --> Một lớp cụ thể phải cài đặt hoặc được thừa kế cài đặt của tất cả các phương thức trừu tượng.
+
+    --> Mỗi lớp trong Java đều là lớp con trực tiếp hoặc gián tiếp của lớp Object.
+
+    --> Nếu ta dùng một tham chiếu để gọi phương thức, tham chiếu đó được khai báo thuộc lớp gì
+    hay interface gì thì ta chỉ được gọi các phương thức có trong lớp đó hoặc interface đó,
+    bất kể đối tượng mà tham chiếu đó đang chiếu tới là đối tượng thuộc lớp nào.
+
+    --> Một biến tham chiếu lớp cha có thể được gán giá trị là tham chiếu kiểu lớp con bất kì mà không cần đổi kiểu.
+    Có thể dùng phép đổi kiểu để gán giá trị là tham chiếu kiểu lớp cha cho một biến tham chiếu kiểu lớp con,
+    tuy nhiên khi chạy chương trình, phép đổi kiểu đó sẽ thất bại nếu đối tượng đang được chiếu tới không thuộc kiểu
+    tương thích với phép đổi kiểu.
+
+    --> Java không hỗ trợ đa thừa kế do vấn đề Hình thoi. Java chỉ cho phép mỗi lớp chỉ có duy nhất một lớp cha.
+
+    --> Một interface tương tự với một lớp thuần túy trừu tượng. Nó chỉ định nghĩa các phương thức trừu tượng.
+
+    --> Một lớp có thể cài đặt nhiều interface.
+
+    --> Lớp nào cài đặt một interface thì phải cài tất cả các phương thức của interface đó,
+    do tất cả các phương thức interface đều là các phương thức trừu tượng public.

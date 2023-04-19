@@ -77,3 +77,4 @@ Access modifier
                xuất đến Inner class
 * Local class: + được khai báo và sử dụng bên trong một khối lệnh
                + Không thể sử dụng bên ngoài khối lệnh
+

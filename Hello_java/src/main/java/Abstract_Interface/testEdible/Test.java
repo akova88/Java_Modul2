@@ -19,6 +19,8 @@ public class Test {
             if (animal instanceof Chicken) {
                 Edible edibler = (Chicken)animal;
                 System.out.println(edibler.howToEat());
+//                ((Edible) animal).howToEat();
+//                System.out.println(((Edible) animal).howToEat());
             }
         }
 

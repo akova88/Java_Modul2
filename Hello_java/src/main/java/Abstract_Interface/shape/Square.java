@@ -1,6 +1,8 @@
 package Abstract_Interface.shape;
 
-public class Square extends Rectangle {
+import Abstract_Interface.Resizeable;
+
+public class Square extends Rectangle implements Resizeable {
     public Square() {
 
     }
@@ -36,6 +38,10 @@ public class Square extends Rectangle {
                 + super.toString();
     }
 
+    @Override
+    public void resize(double percent) {
+        super.resize(percent);
+    }
 
     public static void main(String[] args) {
         Square square = new Square();

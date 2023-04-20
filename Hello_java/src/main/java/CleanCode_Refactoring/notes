@@ -1,0 +1,17 @@
+* CLEAN CODE:
+    ==> Đơn giản:       ngắn gọn, không phức tạp
+    ==> Trực tiếp:      giải quyết đúng vấn đề
+    ==> Dễ đọc:         có thể hiểu được các dòng code dễ dàng
+    ==> Dễ mở rộng:     mở rộng, thay đổi ko gây lộn xộn cho mã nguồn
+    ==> Định danh tốt:  Thể hiện đúng ý nghĩa từng thành phần
+    ==> Không lặp lại mã
+
+    # Quy tắc đặt tên:
+    - Tên biến, lớp:    danh từ, cụm danh từ hoặc tính từ
+    - Tên hàm:          nên bắt đầu bằng động từ
+    - Quy tắc Calmel
+    - Tên lớp:          theo quy tắc Pascal Case
+
+    # Hàm:  - ko làm quá nhiều nhiệm vụ
+            - 1 hàm chỉ thưc hiện 1 nv
+            - ko nên có nhiều tham số

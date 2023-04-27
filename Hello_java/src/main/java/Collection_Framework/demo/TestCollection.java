@@ -23,6 +23,7 @@ public class TestCollection {
         collection2.add("Portland");
         collection2.add("Los Angeles");
         collection2.add("Atlanta");
+        collection2.add("Madison");
 
         System.out.println("\nA list cities in collection 2:");
         System.out.println(collection2);
@@ -33,6 +34,7 @@ public class TestCollection {
         System.out.println(c1);
 
         c1 = (ArrayList) collection1.clone();
+        System.out.println(c1);
         c1.retainAll(collection2);
         System.out.print("\nCities in collection1 and collection2: ");
         System.out.println(c1);

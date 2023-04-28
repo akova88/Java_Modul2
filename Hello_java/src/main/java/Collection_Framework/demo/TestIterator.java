@@ -12,6 +12,9 @@ public class TestIterator {
         collection.add("Madison");
 
         Iterator iterator = collection.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next().toString().toUpperCase() + " ");
+        }
 
         for (Object element : collection) {
             System.out.print(element.toString().toUpperCase()+" ");

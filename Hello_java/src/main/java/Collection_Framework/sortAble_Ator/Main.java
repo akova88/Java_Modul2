@@ -6,24 +6,24 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student("Kien", 33, "HT");
-        Student student1 = new Student("Nam", 26, "HN");
-        Student student2 = new Student("Anh", 38, "HT" );
-        Student student3 = new Student("Tung", 44, "HT" );
+        Student_Comparable studentComparable = new Student_Comparable("Kien", 33, "HT");
+        Student_Comparable studentComparable1 = new Student_Comparable("Nam", 26, "HN");
+        Student_Comparable studentComparable2 = new Student_Comparable("Anh", 38, "HT" );
+        Student_Comparable studentComparable3 = new Student_Comparable("Tung", 44, "HT" );
 
-        List<Student> lists = new ArrayList<>();
-        lists.add(student);
-        lists.add(student1);
-        lists.add(student2);
-        lists.add(student3);
+        List<Student_Comparable> lists = new ArrayList<>();
+        lists.add(studentComparable);
+        lists.add(studentComparable1);
+        lists.add(studentComparable2);
+        lists.add(studentComparable3);
         Collections.sort(lists);
-        for (Student sv : lists) {
+        for (Student_Comparable sv : lists) {
             System.out.println(sv);
         }
         AgeComperator ageComperator = new AgeComperator();
         Collections.sort(lists, ageComperator);
         System.out.println("So sánh theo tuổi");
-        for (Student st : lists) {
+        for (Student_Comparable st : lists) {
             System.out.println(st);
         }
     }

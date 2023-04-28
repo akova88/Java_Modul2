@@ -1,16 +1,14 @@
 package Collection_Framework.sortAble_Ator;
 
-import org.jetbrains.annotations.NotNull;
-
-public class Student implements Comparable<Student>{
+public class Student_Comparable implements Comparable<Student_Comparable>{
     private String name;
     private int age;
     private String address;
 
-    public Student() {
+    public Student_Comparable() {
     }
 
-    public Student(String name, int age, String address) {
+    public Student_Comparable(String name, int age, String address) {
         this.name = name;
         this.age = age;
         this.address = address;
@@ -46,7 +44,7 @@ public class Student implements Comparable<Student>{
     }
 
     @Override
-    public int compareTo(Student student) {
-        return this.getName().compareTo(student.getName());
+    public int compareTo(Student_Comparable studentComparable) {
+        return this.getName().compareTo(studentComparable.getName());
     }
 }

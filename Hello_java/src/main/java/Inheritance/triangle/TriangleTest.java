@@ -23,8 +23,9 @@ public class TriangleTest {
         scanner.nextLine();
         System.out.println("Nhập màu của tam giác:");
         String color = scanner.nextLine();
+        boolean filled = true;
 
-        Triangle triangle = new Triangle(color, side1,side2,side3);
+        Triangle triangle = new Triangle(color,filled, side1,side2,side3);
         System.out.println(triangle);
         System.out.println("Diện tích tam giác = " + triangle.getArea());
         System.out.println("Chu vi tam giác = " + triangle.getPrimeter());

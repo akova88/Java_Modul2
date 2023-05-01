@@ -70,4 +70,15 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
             System.out.println(root.element);
         }
     }
+
+    @Override
+    public void preOrder() {
+        preOrderH(root);
+    }
+    public void preOrderH(TreeNode<E> root) {
+        if(root == null) return;
+        System.out.println(root.element);
+        preOrderH(root.left);
+        preOrderH(root.right);
+    }
 }

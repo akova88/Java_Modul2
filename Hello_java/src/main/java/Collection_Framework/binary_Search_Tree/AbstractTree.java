@@ -9,4 +9,9 @@ public abstract class AbstractTree<E> implements Tree<E>{
     public void postOrder() {
 
     }
+
+    @Override
+    public void preOrder() {
+
+    }
 }

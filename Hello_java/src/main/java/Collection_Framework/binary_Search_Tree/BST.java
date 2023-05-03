@@ -81,4 +81,18 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
         preOrderH(root.left);
         preOrderH(root.right);
     }
+
+    public boolean search(E element) {
+        TreeNode<E> current = root;
+        while (current != null) {
+            if (element.compareTo(current.element) < 0) {
+                current = current.left;
+            } else if (element.compareTo(current.element) > 0) {
+                current = current.right;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
 }

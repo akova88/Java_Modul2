@@ -1,5 +1,7 @@
 package Collection_Framework.binary_Search_Tree;
 
+import com.sun.source.tree.BinaryTree;
+
 public class TestBST {
     public static void main(String[] args) {
         BST<String> tree = new BST<>();
@@ -28,6 +30,6 @@ public class TestBST {
         tree1.preOrder();
         System.out.println(tree1.search(11));
 
-
+        System.out.println(tree1.delete(42));
     }
 }

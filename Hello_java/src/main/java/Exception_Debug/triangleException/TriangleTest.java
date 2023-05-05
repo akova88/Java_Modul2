@@ -16,7 +16,7 @@ public class TriangleTest {
            new Triangle(a, b, c);
             System.out.println("Ba cạnh " + a+", " + b+", " + c+ " là cạnh của tam giác");
         } catch (TriangleException e) {
-            System.out.println("Ba cạnh " + a+", " + b+", " + c+ " không là cạnh của tam giác "+ e.getMessage());
+            System.err.println("Ba cạnh " + a+", " + b+", " + c+ " không là cạnh của tam giác "+ e.getMessage());
         }
     }
 }

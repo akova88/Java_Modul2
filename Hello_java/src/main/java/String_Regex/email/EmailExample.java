@@ -1,4 +1,4 @@
-package String_Regex;
+package String_Regex.email;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

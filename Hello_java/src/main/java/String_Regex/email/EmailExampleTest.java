@@ -1,4 +1,4 @@
-package String_Regex;
+package String_Regex.email;
 
 public class EmailExampleTest {
     private static EmailExample emailExample;

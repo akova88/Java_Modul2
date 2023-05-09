@@ -39,6 +39,7 @@ public class Main {
 //            copyFileUsingJava7Files(sourceFile, destFile);
             copyFileUsingStream(sourceFile, destFile);
             System.out.println("Copy complete");
+            System.out.println("Number of bytes copied: " + new File(destPath).length());
         } catch (Exception ioe) {
             System.out.println("Can't copy that file");
             System.out.println(ioe.getMessage());
